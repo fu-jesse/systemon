@@ -1,0 +1,34 @@
+sample:
+  description: Evaluate system on idle current for nRF54 family for lfxo and lfrc two typical hw config
+  name: systemon
+common:
+  sysbuild: true
+  build_only: true
+  tags: systemon
+  platform_allow:
+    - nrf54l15dk/nrf54l15/cpuapp
+    - nrf54lm20dk/nrf54lm20a/cpuapp
+    - nrf54lm20dk/nrf54lm20b/cpuapp
+    - nrf54ls05dk/nrf54ls05a/cpuapp
+    - nrf54ls05dk/nrf54ls05b/cpuapp
+tests:
+  # name: sample.systemon.<log|nolog>.<ramtrim|ramall>.<lfxo|lfrc>
+  #   log     : prj.conf, log on uart20          nolog : FILE_SUFFIX=release, no log, uart20 disabled
+  #   ramtrim : unused RAM powered down          ramall: ram_all.conf, all RAM powered
+  #   lfxo    : LFXO low-frequency clock         lfrc  : lfrc.conf, LFRC with 4 s calibration
+  sample.systemon.log.ramtrim.lfxo:
+    extra_args: ""
+  sample.systemon.log.ramtrim.lfrc:
+    extra_args: EXTRA_CONF_FILE="lfrc.conf"
+  sample.systemon.log.ramall.lfxo:
+    extra_args: EXTRA_CONF_FILE="ram_all.conf"
+  sample.systemon.log.ramall.lfrc:
+    extra_args: EXTRA_CONF_FILE="ram_all.conf;lfrc.conf"
+  sample.systemon.nolog.ramtrim.lfxo:
+    extra_args: FILE_SUFFIX=release
+  sample.systemon.nolog.ramtrim.lfrc:
+    extra_args: FILE_SUFFIX=release EXTRA_CONF_FILE="lfrc.conf"
+  sample.systemon.nolog.ramall.lfxo:
+    extra_args: FILE_SUFFIX=release EXTRA_CONF_FILE="ram_all.conf"
+  sample.systemon.nolog.ramall.lfrc:
+    extra_args: FILE_SUFFIX=release EXTRA_CONF_FILE="ram_all.conf;lfrc.conf"

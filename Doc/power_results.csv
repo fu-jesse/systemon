@@ -1,0 +1,13 @@
+board,soc,lfclk,ram,supply_V,window,avg_uA,figure
+nRF54L15 DK v1.0.0,nRF54L15 Rev2,LFXO,trim,3.0,1 min,1.45,l15_lfxo_ramtrim_ppk2.png
+nRF54L15 DK v1.0.0,nRF54L15 Rev2,LFXO,all,3.0,1 min,3.33,l15_lfxo_ramall_ppk2.png
+nRF54L15 DK v1.0.0,nRF54L15 Rev2,LFRC,trim,3.0,1 min,2.75,l15_lfrc_ramtrim_ppk2.png
+nRF54L15 DK v1.0.0,nRF54L15 Rev2,LFRC,all,3.0,1 min,4.67,l15_lfrc_ramall_ppk2.png
+nRF54LM20 DK v0.7.0,nRF54LM20B ENGB,LFXO,trim,3.0,1 min,1.43,lm20b_lfxo_ramtrim_ppk2.png
+nRF54LM20 DK v0.7.0,nRF54LM20B ENGB,LFXO,all,3.0,1 min,3.51,lm20b_lfxo_ramall_ppk2.png
+nRF54LM20 DK v0.7.0,nRF54LM20B ENGB,LFRC,trim,3.0,1 min,2.81,lm20b_lfrc_ramtrim_ppk2.png
+nRF54LM20 DK v0.7.0,nRF54LM20B ENGB,LFRC,all,3.0,1 min,4.93,lm20b_lfrc_ramall_ppk2.png
+nRF54LS05 DK v0.3.1,nRF54LS05B Rev1,LFXO,trim,3.0,1 min,1.11,ls05b_lfxo_ramtrim_ppk2.png
+nRF54LS05 DK v0.3.1,nRF54LS05B Rev1,LFXO,all,3.0,1 min,1.77,ls05b_lfxo_ramall_ppk2.png
+nRF54LS05 DK v0.3.1,nRF54LS05B Rev1,LFRC,trim,3.0,1 min,2.36,ls05b_lfrc_ramtrim_ppk2.png
+nRF54LS05 DK v0.3.1,nRF54LS05B Rev1,LFRC,all,3.0,1 min,3.15,ls05b_lfrc_ramall_ppk2.png

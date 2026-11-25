@@ -1,0 +1,20 @@
+# Copyright (c) 2026 Nordic Semiconductor ASA
+#
+# SPDX-License-Identifier: LicenseRef-Nordic-5-Clause
+
+mainmenu "Systemon sample"
+
+config APP_RAM_POWER_DOWN_UNUSED
+	bool "Power down unused RAM sections in System ON IDLE"
+	default y
+	depends on SOC_SERIES_NRF54L && !TRUSTED_EXECUTION_NONSECURE
+	imply RAM_POWER_DOWN_LIBRARY
+	help
+	  Power down the RAM sections (32 KB each) that lie completely above the
+	  RAM used by the image. The content of a powered down section is not
+	  retained. Disable it to keep all RAM powered.
+	  The RAM power down library (power_down_unused_ram()) is used when
+	  RAM_POWER_DOWN_LIBRARY is enabled (implied by default); set it to n to
+	  power down the sections directly through nrf_memconf instead.
+
+source "Kconfig.zephyr"
